@@ -1,0 +1,29 @@
+{
+  "name": "twipodcast",
+  "description": "TwiPodcast is a web app which allows you to listen podcast or any mp3 media file on your phone for free without internet",
+  "main": "index.js",
+  "authors": [
+    "Sandip Bhagat"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "http://sandipbgt.github.io/twipodcast",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7",
+    "angular-loading-bar": "~0.8.0",
+    "angular-strap": "~2.3.5",
+    "angular-ui-router": "~0.2.15",
+    "angular-animate": "~1.4.7"
+  }
+}

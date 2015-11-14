@@ -1,0 +1,11 @@
+<div class="row white">
+    <div class="page-header">
+        <h1>{{ podcastDetail.username }}'s Soundcloud Tracks</h1>
+    </div>
+
+    <div class="col-lg-12">
+        <ul class="list-group">
+            <a ng-repeat="detail in podcastDetail.userTracks.data.tracks" class="list-group-item" href="#" ng-click="podcastDetail.copyUrl(detail.stream_url)">{{ detail.title }}</a>
+        </ul>
+    </div>
+</div>

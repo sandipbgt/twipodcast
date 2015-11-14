@@ -1,0 +1,39 @@
+<div class="send-feedback-view">
+<div class="row">
+	<div class="col-md-offset-4 col-md-4">
+		<div class="send-feedback-form-wrap well white">
+			<form class="send-feedback-form" name="send-feedback-form" ng-submit="sendFeedback.send()">
+				<fieldset>
+					<legend>Feedback</legend>
+
+					<!-- full name -->
+					<div class="form-group col-md-12">
+						<label for="full_name" class="control-label">You name</label>
+						<input type="text" class="form-control" name="full_name" placeholder="your full name" ng-model="sendFeedback.feedbackData.full_name" required>
+					</div>
+
+					<!-- email -->
+					<div class="form-group col-md-12">
+						<label for="email" class="control-label">Your email</label>
+						<input type="email" class="form-control" name="email" placeholder="your email" ng-model="sendFeedback.feedbackData.email" required>
+					</div>
+
+					<!-- feedback message -->
+					<div class="form-group col-md-12">
+						<label for="text" class="control-label">Message</label>
+						<textarea type="text" class="form-control" name="text" placeholder="feedback message" ng-model="sendFeedback.feedbackData.message" required></textarea>
+					</div>
+
+					<!-- Submit button -->
+					<div class="form-group col-md-12">
+						<button type="submit" name="submit_button" class="btn btn-primary btn-block" ng-disabled="sendFeedback.processing">
+							<span ng-if="!sendFeedback.processing">SEND</span>
+							<div ng-if="sendFeedback.processing" class="fetching-spinner"></div>
+						</button>
+					</div>
+				</fieldset>
+			</form> <!-- .send-feedback-form -->
+		</div><!-- .send-feedback-form-wrap -->
+	</div> <!-- .col-md-6 -->
+</div> <!-- .row -->
+</div>
