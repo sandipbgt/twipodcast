@@ -1,0 +1,399 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Endpoints &mdash; twipodcast 0.1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="twipodcast 0.1.0 documentation" href="index.html"/>
+        <link rel="prev" title="Getting Started" href="getting_started.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> twipodcast
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">API Endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#base">Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-base">API Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soundcloud">Soundcloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calls">Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feedback">Feedback</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">twipodcast</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>API Endpoints</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/api.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-endpoints">
+<h1>API Endpoints<a class="headerlink" href="#api-endpoints" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal"><span class="pre">API</span></code> is documented here.</p>
+<p>Feel free to use <code class="docutils literal"><span class="pre">cURL</span></code> and <code class="docutils literal"><span class="pre">python</span></code> to look at formatted json respone. You can
+also look at them in your browser, if it handles returned json.</p>
+<div class="highlight-python"><div class="highlight"><pre>curl http://twipodcast.herokuapp.com | python -m json.tool
+</pre></div>
+</div>
+<div class="section" id="base">
+<h2>Base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h2>
+<dl class="get">
+<dt id="get--">
+<code class="descname">GET </code><code class="descname">/</code><a class="headerlink" href="#get--" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve author and project info</p>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;Sandip Bhagat&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;author_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://sandipbgt.github.io&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;base_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://twipodcast.herokuapp.com&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;project_name&quot;</span><span class="o">:</span> <span class="s2">&quot;twipodcast&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;project_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://github.com/sandipbgt/twipodcast&quot;</span><span class="p">,</span>
+  <span class="s1">&#39;api&#39;</span><span class="o">:</span> <span class="s1">&#39;https://twipodcast.herokuapp.com/api&#39;</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="api-base">
+<h2>API Base<a class="headerlink" href="#api-base" title="Permalink to this headline">¶</a></h2>
+<dl class="get">
+<dt id="get--api">
+<code class="descname">GET </code><code class="descname">/api</code><a class="headerlink" href="#get--api" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve list of api resources.</p>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s1">&#39;soundcloud&#39;</span><span class="o">:</span> <span class="s1">&#39;https://twipodcast.herokuapp.com/api/soundcloud&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;calls&#39;</span><span class="o">:</span> <span class="s1">&#39;https://twipodcast.herokuapp.com/api/calls&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;feedback&#39;</span><span class="o">:</span> <span class="s1">&#39;https://twipodcast.herokuapp.com/api/feedback&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="soundcloud">
+<h2>Soundcloud<a class="headerlink" href="#soundcloud" title="Permalink to this headline">¶</a></h2>
+<dl class="get">
+<dt id="get--api-soundcloud">
+<code class="descname">GET </code><code class="descname">/api/soundcloud</code><a class="headerlink" href="#get--api-soundcloud" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve soundcloud podcaster&#8217;s username list</p>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">&quot;life&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;theordinarylife_podcast&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;python&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;talkpython&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;startup&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;indiastartupchat&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;hearstartup&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;trevorpage-1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;twistartups&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="get">
+<dt id="get--api-soundcloud-(string-username)">
+<code class="descname">GET </code><code class="descname">/api/soundcloud/</code><span class="sig-paren">(</span><em class="property">string: </em><em>username</em><span class="sig-paren">)</span><a class="headerlink" href="#get--api-soundcloud-(string-username)" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrive soundcloud user&#8217;s tracks list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>userame</strong> &#8211; soundcloud username</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">&quot;tracks&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;permalink_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://soundcloud.com/talkpython/episode-33-openstack-cloud-computing-built-on-python&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stream_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://api.soundcloud.com/tracks/232430011/stream&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Episode #33: OpenStack: Cloud computing built on Python&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;permalink_url&quot;</span><span class="o">:</span> <span class="s2">&quot;http://soundcloud.com/talkpython/32-pypyjs-pypy-python-in-your-browser&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;stream_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://api.soundcloud.com/tracks/231487315/stream&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;#32: PyPy.js - PyPy Python in Your Browser&quot;</span>
+        <span class="p">},</span>
+        <span class="p">...</span>
+      <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="calls">
+<h2>Calls<a class="headerlink" href="#calls" title="Permalink to this headline">¶</a></h2>
+<dl class="get">
+<dt id="get--api-calls-say">
+<code class="descname">GET </code><code class="descname">/api/calls/say</code><a class="headerlink" href="#get--api-calls-say" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns TwiML (Twilio Markup Language) response.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Query Parameters:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>text</strong> (<em>string</em>) &#8211; text to be converted to speech</li>
+<li><strong>media_url</strong> (<em>string</em>) &#8211; url of mp3 file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-xml"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;Response&gt;</span>
+    <span class="nt">&lt;Say</span> <span class="na">voice=</span><span class="s">&quot;alice&quot;</span><span class="nt">&gt;</span>Hello world<span class="nt">&lt;/Say&gt;</span>
+    <span class="nt">&lt;Play&gt;</span>http://example.com/media_file.mp3<span class="nt">&lt;/Play&gt;</span>
+<span class="nt">&lt;/Response&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="post">
+<dt id="post--api-calls">
+<code class="descname">POST </code><code class="descname">/api/calls</code><a class="headerlink" href="#post--api-calls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new Twilio call</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>twilio_account_sid</strong> (<em>string</em>) &#8211; Twilio API account sid</li>
+<li><strong>twilio_auth_token</strong> (<em>string</em>) &#8211; Twilio API auth token</li>
+<li><strong>twilio_to_phone</strong> (<em>string</em>) &#8211; verified phone number to call</li>
+<li><strong>twilio_from_phone</strong> (<em>string</em>) &#8211; your Twilio phone number</li>
+<li><strong>text</strong> (<em>string</em>) &#8211; text to be converted to speech</li>
+<li><strong>media_url</strong> (<em>string</em>) &#8211; url of mp3 file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;call_id&quot;</span><span class="o">:</span> <span class="s2">&quot;CA231fb2e3aba93b69a96178b0848b32d7&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="feedback">
+<h2>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h2>
+<dl class="post">
+<dt id="post--api-feedback">
+<code class="descname">POST </code><code class="descname">/api/feedback</code><a class="headerlink" href="#post--api-feedback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send feedback email to admin</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Request JSON Object:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body"><ul class="first last simple">
+<li><strong>full_name</strong> (<em>string</em>) &#8211; sender&#8217;s full name</li>
+<li><strong>email</strong> (<em>string</em>) &#8211; sender&#8217;s email</li>
+<li><strong>message</strong> (<em>string</em>) &#8211; feedback message</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example response</strong>:</p>
+<div class="highlight-js"><div class="highlight"><pre><span class="p">{}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="getting_started.html" class="btn btn-neutral" title="Getting Started" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Sandip Bhagat.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
